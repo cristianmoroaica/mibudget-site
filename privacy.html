@@ -8,6 +8,8 @@
 <p>Retrieved data and credentials are stored locally on the operator's own computer. They are not sold, shared with third parties, used for advertising or analytics, or uploaded to any server operated for MiBudget.</p>
 <h2>This website</h2>
 <p>This site is static and consists of three informational pages. It sets no cookies and contains no analytics or trackers. It is hosted on GitHub Pages, which may keep ordinary server logs under its own privacy statement.</p>
+<h2>Sign-in callback</h2>
+<p>After you approve access in your bank's app, the bank sends your browser to <code>mibudget.mimirslab.com/callback</code>. That page only contains a script that forwards the one-time result to <code>localhost</code> on your own computer. It does not store, log or transmit it elsewhere, but because the page is served by GitHub Pages, the request address may appear in GitHub's own server logs. The one-time code is useless without the private key, which stays on the operator's computer.</p>
 <h2>Consent and retention</h2>
 <p>Bank access is granted by the operator in the bank's own authentication flow and can be withdrawn at any time in the bank's app or by deleting the local data. Local data is kept for as long as the operator uses the tool.</p>
 <h2>Your rights</h2>

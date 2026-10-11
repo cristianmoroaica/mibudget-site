@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><meta name="robots" content="noindex"><link rel="stylesheet" href="style.css"><title>Signing in - MiBudget</title></head>
+<body><main>
+<h1>Returning to MiBudget</h1>
+<p id="msg" class="meta">Passing the bank's response to the MiBudget app on this computer&hellip;</p>
+<p id="help" hidden>Nothing happened? Make sure MiBudget is waiting for the sign-in, then reload this page. This page only forwards the result to <code>localhost</code> on your own device; it stores nothing.</p>
+<footer>MiBudget is a personal, read-only budgeting tool. <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></footer>
+</main>
+<script>
+(function () {
+  var q = window.location.search;
+  if (q.length > 1) {
+    window.location.replace("http://localhost:8765/callback" + q);
+    setTimeout(function () { document.getElementById("help").hidden = false; }, 2500);
+  } else {
+    document.getElementById("msg").textContent = "No sign-in response found in this address.";
+    document.getElementById("help").hidden = false;
+  }
+})();
+</script>
+</body></html>
